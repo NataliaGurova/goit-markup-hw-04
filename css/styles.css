@@ -62,6 +62,7 @@ address {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .container-header {
@@ -97,6 +98,7 @@ address {
 }
 
 .nav-item {
+  
 }
 
 .nav-list {
@@ -113,6 +115,11 @@ address {
 
   display: block;
   padding: 24px 0;
+
+  position: relative;
+  color: #434455;
+  
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -121,11 +128,14 @@ address {
 }
 
 .nav-link::after {
+  position: absolute;
+
   content: "";
-  width: 48px;
+  top: 0;
+  bottom: -1px;
   height: 4px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #404bbf;
 }
 
 .nav-link:hover::after {
@@ -149,6 +159,8 @@ address {
   letter-spacing: 0.02em;
 
   padding: 24px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .address-link:hover,
 .address-link:focus {
@@ -205,6 +217,8 @@ address {
   border: none;
   border-radius: 4px;
   margin: 0 auto;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .top-button:hover,
 .top-button:focus {
@@ -336,8 +350,9 @@ address {
 
 .soc-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
-  margin: 0 auto;
 }
 
 .soc-link {
@@ -407,12 +422,12 @@ address {
 }
 
 .photo-item-overlay {
-  position: relative; /*============*/
-  overflow: hidden; /*============*/
+  position: relative;
+  overflow: hidden;
 }
 
 .overlay {
-  padding: 40px 32px 164px 32px;
+  padding: 40px 32px;
   background-color: #4d5ae5;
   color: #f4f4fd;
 
@@ -445,7 +460,6 @@ address {
   display: block;
   max-width: 100%;
 }
-
 /*============*/
 
 .container-photo-text {
@@ -483,6 +497,7 @@ address {
 
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .container-footer-logo {
